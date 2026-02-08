@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Bestellung – Nitrilhandschuh Blau Gr. M</title>
     <style>
-        /* Einheitliches Box-Modell für alle Elemente */
         * {
             box-sizing: border-box;
         }
@@ -19,23 +18,22 @@
         }
 
         .card {
-            background: #FCFCFC; /* exaktes Logo-Grau */
+            background: #e9ecef; /* Logo-Grau */
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
         }
 
         .logo {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .logo img { 
-            width: 260px; /* feste, gut sichtbare Größe */ 
-            max-width: 90%; /* verhindert Überlaufen auf kleinen Displays */ 
-            height: auto; /* keine Verzerrung */ 
-            display: block; 
+        .logo img {
+            width: 260px;
+            max-width: 90%;
+            height: auto;
+            display: block;
             margin: 0 auto;
         }
 
@@ -68,15 +66,14 @@
             font-size: 16px;
         }
 
-        /* Button exakt wie Input-Felder, nur mit anderer Farbe */
         button {
             display: block;
             width: 100%;
-            padding: 10px;              /* gleiche Höhe wie Input */
-            border-radius: 6px;          /* gleiche Rundung */
-            border: 1px solid #005A9C;   /* Rahmen wie Input, aber in Markenfarbe */
-            font-size: 16px;             /* gleiche Schriftgröße */
-            background: #005A9C;         /* HanseOrder-Blau */
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #005A9C;
+            font-size: 16px;
+            background: #005A9C;
             color: #fff;
             cursor: pointer;
             margin-top: 5px;
@@ -87,6 +84,26 @@
             background: #00497E;
             border-color: #00497E;
         }
+
+        .qr-block {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .qr-block img {
+            width: 220px;
+            height: 220px;
+            border: 4px solid #005A9C;
+            border-radius: 10px;
+            padding: 8px;
+            background: white;
+        }
+
+        .qr-text {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -94,44 +111,5 @@
 <div class="card">
 
     <div class="logo">
-        <!-- WICHTIG: Dateiname an dein tatsächliches Logo anpassen -->
-        <img src="hanseorder-logo.png" alt="HanseOrder Logo">
+        <img src="Hanseorder-logo.png" alt="HanseOrder Logo">
     </div>
-
-    <h2>Nitrilhandschuh Blau Gr. M</h2>
-    <p>Artikelnummer: <strong>10100</strong></p>
-
-    <label for="kunde">Kundennummer:</label>
-    <input type="text" id="kunde" placeholder="Ihre Kundennummer eingeben">
-
-    <label for="menge">Menge (Karton):</label>
-    <input type="number" id="menge" value="1" min="1">
-
-    <button onclick="bestellen()">Jetzt bestellen</button>
-
-</div>
-
-<script>
-function bestellen() {
-    const menge = document.getElementById('menge').value;
-    const kunde = document.getElementById('kunde').value;
-    const artikel = '10100';
-    const name = 'Nitrilhandschuh Blau Gr. M';
-
-    const mailto = 
-        'mailto:info@hanseorder.de'
-        + '?subject=Bestellung%20' + encodeURIComponent(name)
-        + '&body=Kundennummer:%20' + encodeURIComponent(kunde)
-        + '%0AArtikelnummer:%20' + artikel
-        + '%0AMenge:%20' + menge;
-
-    window.location.href = mailto;
-}
-</script>
-
-</body>
-</html>
-
-
-
-
