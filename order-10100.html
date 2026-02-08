@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Bestellung – Nitrilhandschuh Blau Gr. M</title>
     <style>
+        /* Einheitliches Box-Modell für alle Elemente */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 480px;
@@ -27,6 +32,8 @@
 
         .logo img {
             max-width: 200px;
+            height: auto;
+            display: inline-block;
         }
 
         h2 {
@@ -49,29 +56,33 @@
         }
 
         input {
-            padding: 10px;
+            display: block;
             width: 100%;
+            padding: 10px;
             border-radius: 6px;
             border: 1px solid #ccc;
             margin-bottom: 18px;
             font-size: 16px;
         }
 
-        /* Button in der HanseOrder-Farbe */
+        /* Button exakt wie Input-Felder, nur mit anderer Farbe */
         button {
-            padding: 10px; /* gleiche Höhe wie Input-Felder */
+            display: block;
             width: 100%;
-            background: #005A9C; /* Logo-Farbe */
-            color: white;
-            border: none;
-            border-radius: 6px; /* gleiche Rundung wie Inputs */
-            font-size: 16px;
+            padding: 10px;              /* gleiche Höhe wie Input */
+            border-radius: 6px;          /* gleiche Rundung */
+            border: 1px solid #005A9C;   /* Rahmen wie Input, aber in Markenfarbe */
+            font-size: 16px;             /* gleiche Schriftgröße */
+            background: #005A9C;         /* HanseOrder-Blau */
+            color: #fff;
             cursor: pointer;
-            transition: 0.2s;
+            margin-top: 5px;
+            transition: background 0.2s, border-color 0.2s;
         }
 
         button:hover {
-            background: #00497E; /* dunklere Variante für Hover */
+            background: #00497E;
+            border-color: #00497E;
         }
     </style>
 </head>
@@ -80,7 +91,7 @@
 <div class="card">
 
     <div class="logo">
-        <!-- Logo hier einfügen -->
+        <!-- WICHTIG: Dateiname an dein tatsächliches Logo anpassen -->
         <img src="hanseorder-logo.png" alt="HanseOrder Logo">
     </div>
 
