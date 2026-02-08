@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Bestellung – Nitrilhandschuh Blau Gr. M</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +16,7 @@
         }
 
         .card {
-            background: #e9ecef; /* Logo-Grau */
+            background: #e9ecef;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -114,3 +112,40 @@
         <img src="Hanseorder-logo.png" alt="HanseOrder Logo">
     </div>
 
+    <h2>Nitrilhandschuh Blau Gr. M</h2>
+    <p>Artikelnummer: <strong>10100</strong></p>
+
+    <form action="https://formsubmit.co/fabiansadowski@t-online.de" method="POST">
+
+        <input type="hidden" name="_subject" value="Neue Bestellung – Artikel 10100">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://sagma-deals.de/danke.html">
+
+        <input type="hidden" name="Artikelnummer" value="10100">
+        <input type="hidden" name="Bezeichnung" value="Nitrilhandschuh Blau Gr. M">
+
+        <label for="kunde">Kundennummer:</label>
+        <input type="text" id="kunde" name="Kundennummer" required>
+
+        <label for="menge">Menge (Karton):</label>
+        <input type="number" id="menge" name="Menge" min="1" value="1" required>
+
+        <button type="submit">Jetzt bestellen</button>
+    </form>
+
+    <div class="qr-block">
+        <img 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://sagma-deals.de/order-10100.html" 
+            alt="QR Code zur Bestellseite"
+        >
+        <div class="qr-text">
+            <strong>Artikelnummer:</strong> 10100<br>
+            <strong>Bezeichnung:</strong> Nitrilhandschuh Blau Gr. M
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
