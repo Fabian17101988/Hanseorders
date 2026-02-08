@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <title>Danke – HanseOrder</title>
     <style>
+        * { box-sizing: border-box; }
+
         body {
             font-family: Arial, sans-serif;
+            max-width: 480px;
+            margin: 40px auto;
+            padding: 20px;
             background: #FCFCFC;
-            padding: 40px;
-            text-align: center;
             color: #333;
         }
 
-        .container {
-            background: white;
-            padding: 40px;
+        .card {
+            background: #FCFCFC;
+            padding: 25px;
             border-radius: 12px;
-            max-width: 480px;
-            margin: 0 auto;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .logo img {
-            width: 220px;
+            width: 260px;
+            max-width: 90%;
             height: auto;
-            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto;
         }
 
         h1 {
@@ -35,13 +44,10 @@
         p {
             font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 25px;
         }
 
-        .back {
-            margin-top: 30px;
-        }
-
-        .back a {
+        a.button {
             display: inline-block;
             padding: 12px 20px;
             background: #005A9C;
@@ -49,16 +55,17 @@
             text-decoration: none;
             border-radius: 6px;
             font-size: 16px;
+            transition: background 0.2s;
         }
 
-        .back a:hover {
+        a.button:hover {
             background: #00497E;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="card">
 
     <div class="logo">
         <img src="hanseorder-logo.png" alt="HanseOrder Logo">
@@ -67,13 +74,11 @@
     <h1>Vielen Dank für Ihre Bestellung!</h1>
 
     <p>
-        Ihre Anfrage wurde erfolgreich übermittelt.<br>
+        Ihre Bestellung wurde erfolgreich übermittelt.<br>
         Wir kümmern uns schnellstmöglich um die Bearbeitung.
     </p>
 
-    <div class="back">
-        <a href="https://sagma-deals.de">Zurück zur Startseite</a>
-    </div>
+    <a class="button" href="https://sagma-deals.de">Zurück zur Startseite</a>
 
 </div>
 
