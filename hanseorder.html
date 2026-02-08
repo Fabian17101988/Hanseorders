@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestellung – Nitrilhandschuh Blau Gr. M</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: 40px auto; }
+        label { font-weight: bold; }
+        input { padding: 8px; width: 100%; margin-top: 5px; margin-bottom: 15px; }
+        button { padding: 12px; width: 100%; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+<h2>Nitrilhandschuh Blau Gr. M</h2>
+<p>Artikelnummer: <strong>10100</strong></p>
+
+<label for="kunde">Kundennummer:</label>
+<input type="text" id="kunde" placeholder="Ihre Kundennummer eingeben">
+
+<label for="menge">Menge (Karton):</label>
+<input type="number" id="menge" value="1" min="1">
+
+<button onclick="bestellen()">Jetzt bestellen</button>
+
+<script>
+function bestellen() {
+    const menge = document.getElementById('menge').value;
+    const kunde = document.getElementById('kunde').value;
+    const artikel = '10100';
+    const name = 'Nitrilhandschuh Blau Gr. M';
+
+    const mailto = 
+        'mailto:info@hanseorder.de'
+        + '?subject=Bestellung%20' + encodeURIComponent(name)
+        + '&body=Kundennummer:%20' + encodeURIComponent(kunde)
+        + '%0AArtikelnummer:%20' + artikel
+        + '%0AMenge:%20' + menge;
+
+    window.location.href = mailto;
+}
+</script>
+
+</body>
+</html>
